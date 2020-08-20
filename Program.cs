@@ -1,12 +1,9 @@
-﻿using System;
-
-namespace CSharpDS
+﻿namespace CSharpDS
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.ReadLine();
         }
     }
 }

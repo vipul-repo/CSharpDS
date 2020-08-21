@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CSharpDS
 {
@@ -6,7 +7,7 @@ namespace CSharpDS
     {
         static void Main(string[] args)
         {
-            Console.WriteLine();
+
         }
     }
 }

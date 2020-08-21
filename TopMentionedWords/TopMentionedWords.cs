@@ -12,11 +12,9 @@ namespace CSharpDS
             if (topNWords <= 0 || words.Count == 0 || reviews.Count == 0)
                 return result;
 
-            Dictionary<string, int> reviewWordIndex = new Dictionary<string, int>();
+            var reviewWordIndex = GenerateReviewIndex(reviews);
 
-            GenerateReviewIndex(reviewWordIndex, reviews);
-
-            List<Word> mentionList = new List<Word>();
+            SortedSet<Word> mentionList = new SortedSet<Word>(new FrequencyComparer());
 
             foreach (var competitor in words)
             {
@@ -26,26 +24,24 @@ namespace CSharpDS
                 }
             }
 
-            mentionList.Sort((x, y) =>
+            for (int i = 0; i < topNWords; i++)
             {
-                var mentionResult = y.mention - x.mention;
+                var max = mentionList.Max;
 
-                if (mentionResult != 0)
-                    return mentionResult;
+                if (max == null)
+                    break;
 
-                return x.value.CompareTo(y.value);
-            });
-
-            for (int i = 0; i < topNWords && i < mentionList.Count; i++)
-            {
-                result.Add(mentionList[i].value);
+                result.Add(max.value);
+                mentionList.Remove(max);
             }
 
             return result;
         }
 
-        private void GenerateReviewIndex(Dictionary<string, int> reviewWordIndex, List<string> reviews)
+        private Dictionary<string, int> GenerateReviewIndex(List<string> reviews)
         {
+            Dictionary<string, int> reviewWordIndex = new Dictionary<string, int>();
+
             foreach (var review in reviews)
             {
                 Dictionary<string, int> uniqueWordIndex = new Dictionary<string, int>();
@@ -78,6 +74,8 @@ namespace CSharpDS
                     }
                 }
             }
+
+            return reviewWordIndex;
         }
     }
 
@@ -90,6 +88,14 @@ namespace CSharpDS
         {
             this.value = value;
             this.mention = mention;
+        }
+    }
+
+    class FrequencyComparer : IComparer<Word>
+    {
+        public int Compare(Word x, Word y)
+        {
+            return x.mention - y.mention != 0 ? x.mention - y.mention : y.value.CompareTo(x.value);
         }
     }
 }

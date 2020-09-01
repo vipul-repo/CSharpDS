@@ -4,13 +4,13 @@ using Xunit;
 
 namespace CSharpDSTests
 {
-    public class PromotionWinnerTests
+    public class PromotionWinnerProblemTests
     {
-        PromotionWinner tSub;
+        PromotionWinnerProblem tSub;
 
-        public PromotionWinnerTests()
+        public PromotionWinnerProblemTests()
         {
-            tSub = new PromotionWinner();
+            tSub = new PromotionWinnerProblem();
         }
 
         [Fact]

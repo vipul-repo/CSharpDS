@@ -4,13 +4,13 @@ using Xunit;
 
 namespace CSharpDSTests
 {
-    public class LargestAssociationTests
+    public class LargestAssociationProblemTests
     {
-        LargestAssociation tSub;
+        LargestAssociationProblem tSub;
 
-        public LargestAssociationTests()
+        public LargestAssociationProblemTests()
         {
-            tSub = new LargestAssociation();
+            tSub = new LargestAssociationProblem();
         }
 
         [Fact]

@@ -3,14 +3,14 @@ using Xunit;
 
 namespace CSharpDSTests
 {
-    public class BSTNodeDistanceTests
+    public class BSTNodeDistanceProblemTests
     {
-        private BSTNodeDistance bst;
+        private BSTNodeDistanceProblem bst;
         private int[] nums;
 
-        public BSTNodeDistanceTests()
+        public BSTNodeDistanceProblemTests()
         {
-            bst = new BSTNodeDistance();
+            bst = new BSTNodeDistanceProblem();
             nums = new int[] { 5, 2, 1, 7, 3, 6, 4, 8, 9 };
         }
 

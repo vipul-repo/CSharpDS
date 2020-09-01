@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace CSharpDS
 {
-    class TopMentionedWords
+    class TopMentionedWordsProblem
     {
         public List<string> GetTopMentionedWords(int topNWords, List<string> words, List<string> reviews)
         {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace CSharpDS
 {
-    class LargestAssociation
+    class LargestAssociationProblem
     {
         public List<String> largestItemAssociation(List<PairString> itemAssociation)
         {

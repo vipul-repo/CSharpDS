@@ -2,7 +2,7 @@ using System;
 
 namespace CSharpDS
 {
-    class BSTNodeDistance
+    class BSTNodeDistanceProblem
     {
         public int GetDistance(int[] nums, int node1, int node2)
         {

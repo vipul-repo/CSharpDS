@@ -4,13 +4,13 @@ using Xunit;
 
 namespace CSharpDSTests
 {
-    public class TopMentionedWordsTests
+    public class TopMentionedWordsProblemTests
     {
-        TopMentionedWords tSub;
+        TopMentionedWordsProblem tSub;
 
-        public TopMentionedWordsTests()
+        public TopMentionedWordsProblemTests()
         {
-            tSub = new TopMentionedWords();
+            tSub = new TopMentionedWordsProblem();
         }
 
         [Fact]

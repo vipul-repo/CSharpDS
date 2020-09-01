@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace CSharpDS
 {
-    class PromotionWinner
+    class PromotionWinnerProblem
     {
         public int IsWinner(List<List<string>> codeList, List<string> shoppingCart)
         {

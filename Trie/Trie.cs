@@ -17,7 +17,6 @@ namespace CSharpDS
             }
         }
 
-        // check const
         private TrieNode root;
 
         public Trie()

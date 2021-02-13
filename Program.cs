@@ -5,7 +5,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        BadgedAccessProblem.Main1();
+        LongestIncreasingSubsequence.Main1();
     }
 }
 

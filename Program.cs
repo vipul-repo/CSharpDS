@@ -5,7 +5,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        LongestPalindrom.Main1();
+        LongestPalindrome.Main1();
     }
 }
 

@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-class LongestPalindrom
+class LongestPalindrome
 {
     public static void Main1()
     {

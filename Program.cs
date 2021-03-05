@@ -5,7 +5,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        CanSum.Main1();
+        RotationalCipher.Main1();
     }
 }
 
